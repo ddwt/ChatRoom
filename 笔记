@@ -1,0 +1,21 @@
+# 聊天室笔记
+#### 1.ArrayList和List<T>的区别
+> 添加到 ArrayList 中的任何引用或值类型都将隐式地向上强制转换为 Object。如果项是值类型，则必须在将其添加到列表中时进行装箱操作，在检索时进行取消装箱操作。强制转换以及装箱和取消装箱操作都会降低性能；在必须对大型集合进行循环访问的情况下，装箱和取消装箱的影响非常明显
+#### 2.服务器主函数逻辑
+>（1）建立一个socket对象【地址族，流，方式】
+>（2）用socket对象的Bind()方法绑定EndPoint【IPEndPoint(地址，端口)】
+>（3）用socket对象的LIsten()方法开启监听
+>（4）用socket对象的Accept()方法，接收客户端建立连接，返回一个新的Socket
+>（5）将返回的套接字初始化一个Client
+#### 3.Client类用来处理客户端数据
+>（1）属性：Socket, data
+>（2）方法：
+>public Client(Socket s)
+>private void ReceiveMessage()【服务器一直接收客户端消息】
+>public void SendMessage(string message)
+>public bool Connect()
+#### 4.客户端代码
+>ConnectToServer() {}
+>ReceiveMessage() {}
+>SendMessage() {}
+>
